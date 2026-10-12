@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#123b66">
+    <title>JAI | Barangay AI Assistant</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="app-shell">
+        <header class="topbar"><img class="brand-logo" src="assets/jai-logo.png" alt="JAI Barangay AI Assistant logo">
+            <div class="brand-copy">
+                <h1>JAI Barangay AI Assistant</h1>
+                <p>Your Barangay Information Partner</p>
+            </div><span class="status-pill"><span class="status-dot"></span> Offline Ready</span>
+        </header>
+        <section class="welcome-card">
+            <div>
+                <p class="eyebrow">WELCOME TO JAI</p>
+                <h2>Hello! I'm JAI.</h2>
+                <p>Your friendly barangay information assistant. Ask questions or find sample documents you can edit and
+                    bring to your Barangay Hall.</p>
+            </div><img src="assets/jai-logo.png" class="welcome-logo" alt="JAI robot logo">
+        </section>
+        <section class="quick-section">
+            <h2>Quick questions</h2>
+            <div class="quick-grid">
+                <button class="quick-btn"
+                    data-question="What are the usual requirements for barangay clearance?">Barangay
+                    clearance</button><button class="quick-btn"
+                    data-question="How do I request a certificate of indigency?">Certificate of
+                    indigency</button><button class="quick-btn"
+                    data-question="How do I request a certificate of residency?">Certificate of
+                    residency</button><button class="quick-btn"
+                    data-question="Help me write a simple barangay request letter.">Request letter</button><button
+                    class="quick-btn" data-question="What are the barangay office hours?">Office hours</button><button
+                    class="quick-btn" data-question="How can I report a concern to the barangay?">Report a
+                    concern</button>
+            </div>
+        </section>
+        <section class="documents-section">
+            <div class="section-heading">
+                <div>
+                    <h2>Sample document templates</h2>
+                    <p>Download a sample, edit your details, and bring it to your barangay office.</p>
+                </div><span class="template-tag">Editable samples</span>
+            </div>
+            <div class="document-grid">
+                
+<div class="document-grid">
+  <a class="document-card" href="templates/01_Barangay_Clearance_Sample.docx" download>
+    <span class="document-icon">📄</span>
+    <strong>Barangay Clearance</strong>
+    <small>Download sample template</small>
+  </a>
+
+  <a class="document-card" href="templates/02_Certificate_of_Indigency_Sample.docx" download>
+    <span class="document-icon">📄</span>
+    <strong>Certificate of Indigency</strong>
+    <small>Download sample template</small>
+  </a>
+
+  <a class="document-card" href="templates/03_Certificate_of_Residency_Sample.docx" download>
+    <span class="document-icon">📄</span>
+    <strong>Certificate of Residency</strong>
+    <small>Download sample template</small>
+  </a>
+
+  <a class="document-card" href="templates/04_Request_Letter_Template.docx" download>
+    <span class="document-icon">📄</span>
+    <strong>Barangay Request Letter</strong>
+    <small>Download sample template</small>
+  </a>
+</div>
+
+            </div>
+            <p class="document-note">These are sample templates only, not official certificates. The barangay office
+                must verify, approve, sign, and apply its official seal when required. Fees and requirements vary by
+                barangay.</p>
+        </section>
+        <section class="chat-card">
+            <div class="chat-heading">
+                <div>
+                    <h2><img src="assets/jai-logo.png" alt="" class="chat-logo"> Chat with JAI</h2>
+                    <p>Saved answers work offline.</p>
+                </div><button id="clearChat" class="clear-btn" type="button">Clear chat</button>
+            </div>
+            <div id="messages" class="messages" aria-live="polite">
+                <div class="message bot-message">
+                    <div class="avatar"><img src="assets/jai-logo.png" alt="JAI"></div>
+                    <div class="bubble">Hello! Kumusta? Ako si JAI. Ask me about barangay documents, services, office
+                        hours, or request letters. You can also download the sample templates above.</div>
+                </div>
+            </div>
+            <form id="chatForm" class="chat-form"><label class="sr-only" for="userInput">Your question</label><input
+                    id="userInput" name="message" type="text" placeholder="Type your question here..."
+                    autocomplete="off" required><button type="submit" class="send-btn">Send ➤</button></form>
+            <p class="small-note">For exact requirements, official schedules, fees, and issuance, please confirm with
+                your Barangay Hall.</p>
+        </section>
+        <footer>© 2026 JAI Barangay AI Assistant · Offline FAQ version</footer>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
